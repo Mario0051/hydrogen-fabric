@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '0.8-SNAPSHOT'
+    id 'fabric-loom' version '0.9-SNAPSHOT'
 }
 
 archivesBaseName = "${project.archives_base_name}-mc${project.minecraft_version}"
@@ -17,8 +17,8 @@ if (build_id != null) {
     version += "+build.${build_id}"
 }
 
-minecraft {
-    refmapName = "mixins.hydrogen.refmap.json"
+loom {
+    mixin.defaultRefmapName = "mixins.hydrogen.refmap.json"
 }
 
 dependencies {
